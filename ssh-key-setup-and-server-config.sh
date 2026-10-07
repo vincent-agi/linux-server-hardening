@@ -80,7 +80,7 @@ echo "Host $SSH_HOST_ALIAS
     IdentitiesOnly yes" | tee -a $LOGFILE
 
 echo "==== Téléchargement et exécution du script distant ====" | tee -a $LOGFILE
-SCRIPT_URL="https://raw.githubusercontent.com/vincent-agi/utils/refs/heads/main/sshd-secure-config.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/vincent-agi/linux-server-hardening/refs/heads/main/sshd-secure-config.sh"
 SCRIPT_SHA256=$(curl -sSL $SCRIPT_URL | sha256sum | cut -d' ' -f1)
 echo "SHA256 du script téléchargé : $SCRIPT_SHA256" | tee -a $LOGFILE
 
@@ -92,7 +92,7 @@ fi
 
 ssh -p "$REMOTE_PORT" "$REMOTE_USER@$REMOTE_HOST" "curl -sSL $SCRIPT_URL | bash" | tee -a $LOGFILE
 
-SCRIPT_URL="https://raw.githubusercontent.com/vincent-agi/utils/refs/heads/main/fail2ban-setup-interactive.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/vincent-agi/linux-server-hardening/refs/heads/main/fail2ban-setup-interactive.sh"
 SCRIPT_SHA256=$(curl -sSL $SCRIPT_URL | sha256sum | cut -d' ' -f1)
 echo "SHA256 du script téléchargé : $SCRIPT_SHA256" | tee -a $LOGFILE
 
