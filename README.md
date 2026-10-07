@@ -49,8 +49,8 @@ The goal of this toolkit is to simplify and automate the setup of essential secu
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/vincent-agi/utils.git
-   cd utils
+   git clone https://github.com/vincent-agi/linux-server-hardening.git
+   cd linux-server-hardening
    ```
 
 2. Make the scripts executable:
